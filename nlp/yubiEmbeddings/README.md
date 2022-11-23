@@ -30,6 +30,7 @@ ybert = YubiBERT(use_gpu=False, model_type='yubibert_e4_micro')
 
 input_text = "CredAvenue is India’s fastest Fintech unicorn."
 
+### Explore getEmbeddings_last_n_layers() function for a different approach!
 print(ybert.getEmbeddings(input_text))
 ### {'encoded_tokens': tensor([0,30371,9233,3026,18,61,33,15,5426,8605,41599,6,2]), 
 ###  'decoded_tokens': ['', 'cred', 'aven', 'ue', 'is', 'india', '’', 's', 'fastest', 'fintech', 'unicorn', '.', ''], 
