@@ -1,0 +1,4 @@
+sentencepiece>=0.1.97
+fairseq==0.12.2
+tokenizers
+transformers
