@@ -112,3 +112,7 @@ mv sentencepiece* finetuned_model_files/
 mv checkpoints/checkpoint_best.pt finetuned_model_files/
 mv bin_data finetuned_model_files/ 
 rm -f finetuned_model_files/bin_data/*/train.*
+
+################################################################################################################
+### Now you can pass folder path of "finetuned_model_files" to "finetune_yubibert_classification_example.py" ###
+################################################################################################################
