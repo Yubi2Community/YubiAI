@@ -1,6 +1,6 @@
 ### FTP Server constants
 FTPPORT = "8989"
-FTPHOST = "54.151.93.61"
+FTPHOST = "13.235.92.51"
 
 ### Cernunnos base path constant
 import pathlib
