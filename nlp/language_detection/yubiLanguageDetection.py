@@ -9,12 +9,14 @@
 ###     Data size of : >12Gb
 ###
 
-import os, re, torch
+import os, re, torch, json
 from fairseq.models.roberta import RobertaModel
 from fairseq.data.data_utils import collate_tokens
 from torch.nn.functional import softmax
-from cernunnos.nlp.utility.file_handlers import load_json
-from YubiAI import FTPHOST, FTPPORT, BASE_PATH 
+from YubiAI.nlp.utility.file_handlers import load_json
+from YubiAI import FTPHOST, FTPPORT, BASE_PATH
+
+
 
 class LanguageDetection():
     """
