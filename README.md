@@ -33,6 +33,8 @@ tokenizer = YubiTokenizer()
 * Nov 2022
     * [YubiBERT Small Encoder8](./nlp/yubiEmbeddings/)
     * [HuggingFace Supported YubiTokenizers](./nlp/tokenizer/)
+* Dec 2022
+    * [Yubi Text Language Detection](./nlp/language_detection/)
 
 </p>
 </details>
