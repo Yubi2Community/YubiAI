@@ -2,15 +2,16 @@
 
 ## Yubi Languange Detection Model
 
-* Using [YubiTokenzier](https://github.com/credavenue/yubi_ds_capability/tree/language_detection/cernunnos/nlp/tokenizer) Byte-Pair-Encoding tokenizer trained using fintech data.
+* Using [YubiTokenzier](../tokenizer/) Byte-Pair-Encoding tokenizer trained using fintech data.
 * Support 14 most used Indian languages and Transliterated versions of these languages.
 * Data consists of : News & transliterated text
-* Data size of
-    * >12Gb
+* Data size of >12Gb
 * Inference Speed of ~10-50 microseconds
-* [How it was trained ?](https://docs.google.com/document/d/1x_YxhRjAT4sFudmmTIdREqo7WNARf_cteeOYTNFAfdE/edit?usp=sharing)
 * Where it can be useful ?
-    * When we want to detect document/coversation language.
+    * To detect document language
+    * To detect chatbot conversation language
+    * To detect speech-bot conversation language after speech-2-text
+    * Differentiate between text vs roman-transliterated-text
 
 ## How to import and use Yubi Languagae Detection
 
