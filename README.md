@@ -35,6 +35,8 @@ tokenizer = YubiTokenizer()
     * [HuggingFace Supported YubiTokenizers](./nlp/tokenizer/)
 * Dec 2022
     * [Yubi Text Language Detection](./nlp/language_detection/)
+    * [TrueCaser Model](./nlp/seq2seq/)
+    * [Character-2-Text generation Model](./nlp/seq2seq/)
 
 </p>
 </details>
