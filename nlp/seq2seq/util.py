@@ -4,21 +4,19 @@
 ###
 
 from fairseq.models.transformer import TransformerModel
-from cernunnos import FTPHOST, FTPPORT, S3BASEPATH, CERNUNNOS_PATH
+from YubiAI import FTPHOST, FTPPORT, BASE_PATH 
 import os, re
 
 
 class Seq2SeqFairseqWrapper:
     def __init__(self, use_gpu=False, model_type="TrueCaser_transformer_wmt_en_de_big_t2t"):
-        ### Mention all default model variables
         self.use_gpu = use_gpu
         self.model_type = model_type
-        self.current_path = CERNUNNOS_PATH
+        self.current_path = BASE_PATH
         self.model_folder_name = model_type
         self.model_folder_path = "%s/models/%s" % (self.current_path, self.model_folder_name)
         self.model_file_name = "checkpoint_best.pt"
         self.model_file_path = "%s/%s" % (self.model_folder_path, self.model_file_name)
-        self.s3_path = "%s/models/%s" % (S3BASEPATH, self.model_folder_name)
 
         self.model_zip_path = "%s/models/" % self.current_path
         self.model_zip_name = "%s.zip" % self.model_folder_name
