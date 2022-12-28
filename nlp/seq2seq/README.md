@@ -29,6 +29,23 @@
 
     ```
 
+    ### Benchmarks
+    Benchmarked with 10k wikipedia sentences and 10k news sentences. Used current best [truecaser library](https://pypi.org/project/truecase/). This library uses [NLTK](https://www.nltk.org/index.html) internally and references this [SOTA paper](https://www.cs.cmu.edu/~llita/papers/lita.truecasing-acl2003.pdf). 
+    </br> Supposedly, [Grammerly](https://app.grammarly.com/) should be taken for comparison as their plugin seems to work better, also their [paper](https://arxiv.org/pdf/1906.01733.pdf) looks better. But not able to compare it directly without any api.
+    </br> Following are BLEU score comparisons - 
+    
+    | Wiki-dataset  | BLEU score avg | 1-gram | 2-gram | 3-gram | 4-gram |
+    | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+    | truecase pypi  | 82.77 | 92.2 | 85.5 | 79.8 | 74.6 |
+    | <b>yubiai-truecaser  | <b>97.00 | <b>98.6 | <b>97.5 | <b>96.5 | <b>95.5 |
+
+    | News-dataset  | BLEU score avg | 1-gram | 2-gram | 3-gram | 4-gram |
+    | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+    | truecase pypi  | 71.04 | 84.6 | 74.2 | 66.7 | 60.8 |
+    | <b>yubiai-truecaser  | <b>89.40 | <b>94.4 | <b>90.5 | <b>87.7 | <b>85.2 |
+
+</br></br>
+
 
 ## Character-2-Text Model for English+Regional Language
 
@@ -44,6 +61,7 @@
     * `torch>=1.13.0`
     * `sentencepiece>=0.1.97`
     * `fairseq=0.12.2`
+* Nothing similar to this model exists so could not benchmark it against any other model.
 
     ### How to run
 
