@@ -30,7 +30,12 @@ class Seq2SeqFairseqWrapper:
         Verify if model folder exists at default path.
         If not then download the same from default ftp location
         """
-        if not os.path.exists(self.model_folder_path):
+        if os.path.exists(self.model_folder_path):
+            print("Model Path exist !!")
+        elif os.path.exists(f"{self.model_zip_path}/{self.model_zip_name}"):
+            print("Model Path exist(ZIP format) !!")
+            os.system("cd %s; unzip %s; rm -f %s; cd -;" % (self.model_zip_path, self.model_zip_name, self.model_zip_name))
+        else:
             print("Model Path do not exist !!")
             os.system("wget %s -P %s" % (self.ftp_path, self.model_zip_path))
             os.system("cd %s; unzip %s; rm -f %s; cd -;" % (self.model_zip_path, self.model_zip_name, self.model_zip_name))
