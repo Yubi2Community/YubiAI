@@ -1,0 +1,48 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "yubiai"
+description = "YubiAi builds great Models. Easy to use NLP, CV and Speech Modules with pre-trained Models."
+authors = [{name = "Mettu Venkata Ramireddy", email = "venkata.ramireddy@go-yubi.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+dynamic = ["version"]
+requires-python = ">=3.7"
+dependencies = [
+    "torch==1.13.1"
+]
+
+[project.optional-dependencies]
+nlp = [
+    "sentencepiece>=0.1.97",
+    "fairseq==0.12.2",
+    "tokenizers",
+    "transformers",
+    "sentence-transformers==2.2.2"
+]
+
+cv = [
+    "torchvision==0.14.0"
+]
+
+speech = [
+    "torchaudio==0.13.0",
+    "pydub==0.25.1",
+    "ffmpeg==1.4",
+    "ffprobe==0.5",
+    "ffmpeg-python==0.2.0"
+]
+
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+doc = ["sphinx"]
+
+
+[project.urls]
+Home = "https://github.com/Yubi2Community/YubiAI"
