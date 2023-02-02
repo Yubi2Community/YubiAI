@@ -2,3 +2,5 @@ sentencepiece>=0.1.97
 fairseq==0.12.2
 tokenizers
 transformers
+tensorflow==2.11.0
+keras==2.11.0

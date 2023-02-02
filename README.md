@@ -40,5 +40,15 @@ tokenizer = YubiTokenizer()
 
 </p>
 </details>
+</br>
+
+<details><summary>What's new in Vision</summary><p>
+
+* January 2023
+    * [Image Augmentations (Random rotate & croppings)](./vision/utility/)
+    * [Document Skew Detection](./vision/skew_detection/)
+
+</p></details>
+</br>
 
 </br>
