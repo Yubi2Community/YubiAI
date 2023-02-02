@@ -7,7 +7,7 @@
 ###     Type 2 : Skew Angle Detection (0 to 90 float numbers)
 ###
 
-from cernunnos import FTPHOST, FTPPORT, CERNUNNOS_PATH
+from YubiAI import FTPHOST, FTPPORT, CERNUNNOS_PATH
 import os, random
 import PIL.Image
 from tensorflow.keras.models import load_model
