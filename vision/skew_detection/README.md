@@ -27,7 +27,11 @@
 * `ResNet101v2` was used with some extra layers at the end. Fine-tuned with all layers open.
 * Took 3+ days on `g5dn.12xlarge` instance for each run.
 * MAE was ~1 degree angle when we stopped the training.
-* Two models are trained - `SkewDetection_ResNet101V2_0-90` and `SkewDetection_ResNet101V2_45-135`
+* Two models are trained
+    * `SkewDetection_ResNet101V2_0-90` : Detects angle between 0 to 90 
+    * `SkewDetection_ResNet101V2_45-135` : Detects angle between -45 to 45
+* For better and easier inference `0-90` models for both quad and skew should be run together. 
+* Similarly `45-135` models should be run together.
 * More benchmarks coming soon!
 
 ## How to run
