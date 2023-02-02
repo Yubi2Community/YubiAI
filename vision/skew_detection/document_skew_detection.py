@@ -7,7 +7,7 @@
 ###     Type 2 : Skew Angle Detection (0 to 90 float numbers)
 ###
 
-from YubiAI import FTPHOST, FTPPORT, CERNUNNOS_PATH
+from YubiAI import FTPHOST, FTPPORT, BASE_PATH
 import os, random
 import PIL.Image
 from tensorflow.keras.models import load_model
@@ -23,7 +23,7 @@ class YubiDocSkewDetector:
     def __init__(self, qudrant_model="Quad4Detection_ResNet101V2_0-90", skew_model="SkewDetection_ResNet101V2_0-90", use_gpu=False):
         ### Mention all default model variables
         self.use_gpu = use_gpu
-        self.current_path = CERNUNNOS_PATH
+        self.current_path = BASE_PATH
 
         self.preprocessing_obj = image_preprocessing()
 
