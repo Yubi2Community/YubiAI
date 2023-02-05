@@ -137,8 +137,8 @@ class YubiDocSkewDetector:
         """
         From given image generate random crops and tensor dataset with batch-size
         """
-        self.correct_image_size(imagepath)
         self.remove_extra_white_paddings(imagepath)
+        self.correct_image_size(imagepath)
         rseed = random.randint(0,9999)
 
         ### Generated "num_crops" images with random crop strategy
