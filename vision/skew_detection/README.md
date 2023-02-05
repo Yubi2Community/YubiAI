@@ -18,7 +18,17 @@
         * Q4 -> 315-360 & 0-45 degree angles
 * Accuracy on validation test was ~96-97% 
 * Accuracy improves when we take >5 random patches of original images and take votes
-* More benchmarks coming soon!
+* 23k images test set `classification report`
+
+    | Quadrant | precision | recall | f1-score | support |
+    | -------- | --------- | ------ | -------- | ------- |
+    | Q1 | 0.99 | 0.97 | 0.98 | 5524 | 
+    | Q2  | 0.98 | 0.98 | 0.98 | 5408 | 
+    | Q3  | 0.98 | 0.98 | 0.98 | 5459 | 
+    | Q4  | 0.97 | 0.99 | 0.98 | 5465 |
+    | accuracy | | | 0.98 | 21856 |
+    | macro avg | 0.98 | 0.98 | 0.98 | 21856 | 
+    | weighted avg | 0.98 | 0.98 | 0.98 | 21856 | 
 
 ## Angle Detection
 * We trained model to detect if skewed angle lies in `Q1` i.e. return value between 0 and 90 degrees
@@ -32,7 +42,7 @@
     * `SkewDetection_ResNet101V2_45-135` : Detects angle between -45 to 45
 * For better and easier inference `0-90` models for both quad and skew should be run together. 
 * Similarly `45-135` models should be run together.
-* More benchmarks coming soon!
+* On 23k Set MAE `~5.35` and RMSE `~7.47`
 
 ## How to run
 
