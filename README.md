@@ -35,7 +35,7 @@ pip install ".[nlp,cv]"
 import sys
 sys.path.append("/parent/directory/path/of/yubiai/")
 
-from YubiAI.nlp.tokenizer.yubiTokenizer import YubiTokenizer
+from yubiai.nlp.tokenizer.yubiTokenizer import YubiTokenizer
 tokenizer = YubiTokenizer()
 
 ```
