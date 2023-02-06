@@ -11,15 +11,18 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi Data
 * Clone the git repository or download zip/tar files and unzip
 ```
 cd /parent/directory/path/of/yubiai/
+```
 # If you need only NLP dependencies
+```
 pip install ".[nlp]"
-
+```
 # If you need only Vision dependencies
+```
 pip install ".[cv]"
-
+```
 # If you need both NLP & Vision dependencies
+```
 pip install ".[nlp,cv]"
-
 ```
 
 ## How to use package
