@@ -7,6 +7,21 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi Data
 * Models files hosted on FTP server and are downloaded when constructor is called
 * Curently tested on `Ubuntu 20.04`, `MacOS 12.3` and `python >=3.7`
 
+## How to install package
+* Clone the git repository or download zip/tar files and unzip
+```
+cd /parent/directory/path/of/yubiai/
+# If you need only NLP dependencies
+pip install ".[nlp]"
+
+# If you need only Vision dependencies
+pip install ".[cv]"
+
+# If you need both NLP & Vision dependencies
+pip install ".[nlp,cv]"
+
+```
+
 ## How to use package
 * Clone the git repository or download zip/tar files and unzip
 * You need to append the repo path using `sys`
