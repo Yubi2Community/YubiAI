@@ -43,6 +43,9 @@ test = [
 
 doc = ["sphinx"]
 
+[tool.distutils.bdist_wheel]
+universal = true
 
 [project.urls]
 Home = "https://github.com/Yubi2Community/YubiAI"
+

@@ -1,4 +1,3 @@
-"""YubiAi, build great Models. Easy to use."""
 __version__ = "01.23"
 
 ### FTP Server constants

@@ -4,7 +4,7 @@
 ###
 
 from fairseq.models.transformer import TransformerModel
-from YubiAI import FTPHOST, FTPPORT, BASE_PATH 
+from yubiai import FTPHOST, FTPPORT, BASE_PATH 
 import os, re
 
 

@@ -22,7 +22,7 @@
 import sys
 sys.path.append("/parent/directory/path/of/yubiai/")
 
-from YubiAI.nlp.tokenizer.yubiTokenizer import YubiTokenizer
+from yubiai.nlp.tokenizer.yubiTokenizer import YubiTokenizer
 tokenizer = YubiTokenizer()
 
 text = "CredAvenue is building India’s first and largest de-facto operating system for the discovery, investment, fulfilment, and collection of any debt solution."
@@ -43,7 +43,7 @@ We can either `tokenizers` version of a model OR `transformers` version of model
 import sys
 sys.path.append("/parent/directory/path/of/yubiai/")
 
-from YubiAI.nlp.tokenizer.yubiTokenizer import YubiTokenizerHF
+from yubiai.nlp.tokenizer.yubiTokenizer import YubiTokenizerHF
 tokenizer = YubiTokenizerHF()
 
 text = "CredAvenue is building India’s first and largest de-facto operating system for the discovery, investment, fulfilment, and collection of any debt solution."

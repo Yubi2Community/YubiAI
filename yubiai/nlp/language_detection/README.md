@@ -17,7 +17,7 @@
 
 ```python
 
-from YubiAI.nlp.language_detection.yubiLanguageDetection import LanguageDetection
+from yubiai.nlp.language_detection.yubiLanguageDetection import LanguageDetection
 
 model = LanguageDetection()
 
