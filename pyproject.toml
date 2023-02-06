@@ -25,23 +25,9 @@ nlp = [
 ]
 
 cv = [
-    "torchvision==0.14.0"
+    "tensorflow==2.11.0",
+    "keras==2.11.0"
 ]
-
-speech = [
-    "torchaudio==0.13.0",
-    "pydub==0.25.1",
-    "ffmpeg==1.4",
-    "ffprobe==0.5",
-    "ffmpeg-python==0.2.0"
-]
-
-test = [
-    "pytest",
-    "pytest-cov",
-]
-
-doc = ["sphinx"]
 
 [tool.distutils.bdist_wheel]
 universal = true
