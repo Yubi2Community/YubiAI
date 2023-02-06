@@ -15,7 +15,7 @@ Output will be numpy array .. which can be loaded to see the image.
 
 ```python
 
-from YubiAI.vision.utility.preprocess import image_preprocessing
+from yubiai.vision.utility.preprocess import image_preprocessing
 
 preprocessing_object = image_preprocessing()
 image_path = "/home/ubuntu/some_image.jpeg"
@@ -56,7 +56,7 @@ Output will be a generator .. which can be iterated to load the image and inform
 
 ```python
 
-from YubiAI.vision.utility.preprocess import image_preprocessing
+from yubiai.vision.utility.preprocess import image_preprocessing
 
 preprocessing_object = image_preprocessing()
 

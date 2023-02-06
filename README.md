@@ -7,6 +7,24 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi Data
 * Models files hosted on FTP server and are downloaded when constructor is called
 * Curently tested on `Ubuntu 20.04`, `MacOS 12.3` and `python >=3.7`
 
+## How to install package
+* Clone the git repository or download zip/tar files and unzip
+```
+cd /parent/directory/path/of/YubiAI/
+```
+* Install only NLP dependencies
+```
+pip install ".[nlp]"
+```
+* Install only Vision dependencies
+```
+pip install ".[cv]"
+```
+* Install both NLP & Vision dependencies
+```
+pip install ".[nlp,cv]"
+```
+
 ## How to use package
 * Clone the git repository or download zip/tar files and unzip
 * You need to append the repo path using `sys`
@@ -17,7 +35,7 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi Data
 import sys
 sys.path.append("/parent/directory/path/of/yubiai/")
 
-from YubiAI.nlp.tokenizer.yubiTokenizer import YubiTokenizer
+from yubiai.nlp.tokenizer.yubiTokenizer import YubiTokenizer
 tokenizer = YubiTokenizer()
 
 ```
@@ -28,15 +46,16 @@ tokenizer = YubiTokenizer()
 <p>
 
 * Oct 2022
-    * [YubiTokenizer trained on FinTech multilingual data](./nlp/tokenizer/)
-    * [YubiBERT Micro Encoder4](./nlp/yubiEmbeddings/)
+    * [YubiTokenizer trained on FinTech multilingual data](./yubiai/nlp/tokenizer/)
+    * [YubiBERT Micro Encoder4](./yubiai/nlp/yubiEmbeddings/)
 * Nov 2022
-    * [YubiBERT Small Encoder8](./nlp/yubiEmbeddings/)
-    * [HuggingFace Supported YubiTokenizers](./nlp/tokenizer/)
+    * [YubiBERT Small Encoder8](./yubiai/nlp/yubiEmbeddings/)
+    * [HuggingFace Supported YubiTokenizers](./yubiai/nlp/tokenizer/)
 * Dec 2022
-    * [Yubi Text Language Detection](./nlp/language_detection/)
-    * [TrueCaser Model](./nlp/seq2seq/)
-    * [Character-2-Text generation Model](./nlp/seq2seq/)
+    * [Yubi Text Language Detection](./yubiai/nlp/language_detection/)
+    * [TrueCaser Model](./yubiai/nlp/seq2seq/)
+    * [Character-2-Text generation Model](./yubiai/nlp/seq2seq/)
+
 
 </p>
 </details>
@@ -45,8 +64,8 @@ tokenizer = YubiTokenizer()
 <details><summary>What's new in Vision</summary><p>
 
 * January 2023
-    * [Image Augmentations (Random rotate & croppings)](./vision/utility/)
-    * [Document Skew Detection](./vision/skew_detection/)
+    * [Image Augmentations (Random rotate & croppings)](./yubiai/vision/utility/)
+    * [Document Skew Detection](./yubiai/vision/skew_detection/)
 
 </p></details>
 </br>

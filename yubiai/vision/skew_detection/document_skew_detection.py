@@ -7,11 +7,11 @@
 ###     Type 2 : Skew Angle Detection (0 to 90 float numbers)
 ###
 
-from YubiAI import FTPHOST, FTPPORT, BASE_PATH
+from yubiai import FTPHOST, FTPPORT, BASE_PATH
 import os, random
 import PIL.Image
 from tensorflow.keras.models import load_model
-from YubiAI.vision.utility.preprocess import image_preprocessing
+from yubiai.vision.utility.preprocess import image_preprocessing
 import numpy as np
 import tensorflow as tf
 from scipy import ndimage
