@@ -59,7 +59,7 @@
 
 ```python
 
-from YubiAI.vision.skew_detection.document_skew_detection import YubiDocSkewDetector
+from yubiai.vision.skew_detection.document_skew_detection import YubiDocSkewDetector
 
 skew_detector = YubiDocSkewDetector(qudrant_model="Quad4Detection_ResNet101V2_0-90", 
                                     skew_model="SkewDetection_ResNet101V2_0-90", 

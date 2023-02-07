@@ -10,7 +10,7 @@ from fairseq.models.roberta import RobertaModel
 import numpy as np
 import re
 import torch
-from YubiAI import FTPHOST, FTPPORT, BASE_PATH 
+from yubiai import FTPHOST, FTPPORT, BASE_PATH 
 
 
 class YubiBERT:

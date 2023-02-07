@@ -24,7 +24,7 @@ Available model types are : `yubibert_e4_micro` and `yubibert_e8_small`
 import sys
 sys.path.append("/parent/directory/path/of/yubiai/")
 
-from YubiAI.nlp.yubiEmbeddings.yubibert import YubiBERT
+from yubiai.nlp.yubiEmbeddings.yubibert import YubiBERT
 
 ybert = YubiBERT(use_gpu=False, model_type='yubibert_e4_micro')
 

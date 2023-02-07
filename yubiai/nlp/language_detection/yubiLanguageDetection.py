@@ -13,8 +13,8 @@ import os, re, torch, json
 from fairseq.models.roberta import RobertaModel
 from fairseq.data.data_utils import collate_tokens
 from torch.nn.functional import softmax
-from YubiAI.nlp.utility.file_handlers import load_json
-from YubiAI import FTPHOST, FTPPORT, BASE_PATH
+from yubiai.nlp.utility.file_handlers import load_json
+from yubiai import FTPHOST, FTPPORT, BASE_PATH
 
 
 
