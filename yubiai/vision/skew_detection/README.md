@@ -42,7 +42,18 @@
     * `SkewDetection_ResNet101V2_45-135` : Detects angle between -45 to 45
 * For better and easier inference `0-90` models for both quad and skew should be run together. 
 * Similarly `45-135` models should be run together.
-* On 23k Set MAE `~5.35` and RMSE `~7.47`
+* Our model performance
+    * On 23k Set `MAE - 5.35` and `RMSE - 7.47` for our model 
+    * Skewness from 0 to 360 degrees converted to 0-90 degrees with `Quadrant Detection` model
+* Comparison with [jdeskew model](https://github.com/phamquiluan/jdeskew)
+    * `jdeskew` works for skew from -45 to 45 so reduced the testset to ~7.4k images with this restriction
+    * Our model works better far away from 0 degree. `jdeskew` works well near 0 degree and worse far from it. Strange behaviours and we hope to explore more.
+    * Saying that ... our model works for 0-90 degree and with quadrant detection actually works for 0-360 degrees.
+
+    | model | RMSE | MAE |
+    | ----- | ---- | --- | 
+    | jdeskew | 23.91 | 16.72 |
+    | yubi-skew-detection | 22.16 | 13.31 |
 
 ## How to run
 
