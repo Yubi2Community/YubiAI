@@ -17,7 +17,7 @@
 
 import sentencepiece as spm
 import os
-from YubiAI import FTPHOST, FTPPORT, BASE_PATH
+from yubiai import FTPHOST, FTPPORT, BASE_PATH
 from tokenizers.implementations import SentencePieceBPETokenizer
 from transformers import PreTrainedTokenizerFast
 

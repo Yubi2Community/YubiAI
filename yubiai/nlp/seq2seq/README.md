@@ -19,7 +19,7 @@
 
     ```python
 
-    from YubiAI.nlp.seq2seq.util import Seq2SeqFairseqWrapper
+    from yubiai.nlp.seq2seq.util import Seq2SeqFairseqWrapper
 
     seq2seq_model = Seq2SeqFairseqWrapper(use_gpu=False, model_type="TrueCaser_transformer_wmt_en_de_big_t2t")
 
@@ -67,7 +67,7 @@
 
     ```python
 
-    from YubiAI.nlp.seq2seq.util import Seq2SeqFairseqWrapper
+    from yubiai.nlp.seq2seq.util import Seq2SeqFairseqWrapper
 
     seq2seq_model = Seq2SeqFairseqWrapper(use_gpu=False, model_type="character2text_transformer_wmt_en_de_big_t2t")
 
