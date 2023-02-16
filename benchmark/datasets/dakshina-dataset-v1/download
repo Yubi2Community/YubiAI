@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cd $SCRIPT_DIR
+
+FILENAME="dakshina_dataset_v1.0.tar"
+if [[ -f $FILENAME ]]; then
+  echo "Dataset already downloaded"
+else
+  echo "Downloading the dataset..."
+  wget https://storage.googleapis.com/gresearch/dakshina/${FILENAME}
+fi
+
+if [[ ! -f "dakshina_dataset_v1.0" ]]; then
+  echo "Extracting the dataset..."
+  tar xvf $FILENAME
+fi

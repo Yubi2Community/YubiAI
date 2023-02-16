@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cd $SCRIPT_DIR
+
+FILENAME="wili-2018.zip"
+if [[ -f $FILENAME ]]; then
+  echo "Dataset already downloaded"
+else
+  echo "Downloading the dataset..."
+	curl https://zenodo.org/record/841984/files/wili-2018.zip?download=1 > ${FILENAME}
+fi
+
+if [[ ! -f "labels.csv" ]]; then
+  echo "Extracting the dataset..."
+  unzip $FILENAME
+fi
