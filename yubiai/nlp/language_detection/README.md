@@ -1,6 +1,6 @@
 # Language Detection
 
-## Yubi Languange Detection Model
+## YuLan - Yubi's Languange Detection Model
 
 * Using [YubiTokenzier](../tokenizer/) Byte-Pair-Encoding tokenizer trained using fintech data.
 * Support 14 most used Indian languages and Transliterated versions of these languages.
@@ -13,7 +13,7 @@
     * To detect speech-bot conversation language after speech-2-text
     * Differentiate between text vs roman-transliterated-text
 
-## How to import and use Yubi Languagae Detection
+## How to import and use YuLan models
 
 ```python
 
