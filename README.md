@@ -52,9 +52,11 @@ tokenizer = YubiTokenizer()
     * [YubiBERT Small Encoder8](./yubiai/nlp/yubiEmbeddings/)
     * [HuggingFace Supported YubiTokenizers](./yubiai/nlp/tokenizer/)
 * Dec 2022
-    * [Yubi Text Language Detection](./yubiai/nlp/language_detection/)
+    * [YuLan V1 - Yubi's Text Language Detection](./yubiai/nlp/language_detection/)
     * [TrueCaser Model](./yubiai/nlp/seq2seq/)
     * [Character-2-Text generation Model](./yubiai/nlp/seq2seq/)
+* Feb 2023
+    * [YuLan V2 - Yubi's Text Language Detection](./yubiai/nlp/language_detection/)
 
 
 </p>
