@@ -26,9 +26,9 @@ Following is the list of some of the projects to which students can contribute. 
 
 ## Project Briefs
 
-1. Create/Collect QnA dataset for Fintech Chatbot or Auto-QnA system
-&emsp;&emsp;* Data collection task to train a model like chatgpt but for fintech queries
-&emsp;&emsp;* We need to collect as many questions and answers which are Finance, business, and fintech related and create a corpus.
+1. Create/Collect QnA dataset for Fintech Chatbot or Auto-QnA system</br>
+&emsp;&emsp;* Data collection task to train a model like chatgpt but for fintech queries</br>
+&emsp;&emsp;* We need to collect as many questions and answers which are Finance, business, and fintech related and create a corpus.</br>
 </br>
 2. Model hallucination + Factual text generation model for FinTech (Summary, NER)</br>
 &emsp;&emsp;* Generative AI can not answer deterministically .. it generally hallucinates the next text to be generated. </br>
