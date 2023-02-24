@@ -4,14 +4,14 @@
 
 * Using [YubiTokenzier](../tokenizer/) Byte-Pair-Encoding tokenizer trained using fintech data.
 * Support 14 most used Indian languages and Transliterated versions of these languages.
-* Data consists of : News & transliterated text
-* Data size of >12Gb
-* Inference Speed of ~10-50 microseconds
+* Data consists of : News & transliterated text.
+* Data size of >12Gb.
+* Inference Speed of ~10-50 microseconds.
 * Where it can be useful ?
-    * To detect document language
-    * To detect chatbot conversation language
-    * To detect speech-bot conversation language after speech-2-text
-    * Differentiate between text vs roman-transliterated-text
+    * To detect document language.
+    * To detect chatbot conversation language.
+    * To detect speech-bot conversation language after speech-2-text.
+    * Differentiate between text vs roman-transliterated-text.
 
 ## How to import and use YuLan model
 * **LanguageDetection** calss takes two arguments **task_name** and **use_gpu**.
