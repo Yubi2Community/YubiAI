@@ -1,4 +1,4 @@
-# Classification performance for yubilangdetect-v2 on yubi-benchmark-dataset-v2
+# Classification performance for yulan-e4-v2 on yubi-benchmark-dataset-v2
 
 - Dataset coverage (sentences in supported languages): 80144 (100.00%)
 - **Aggregated accuracy: 93.94%**
