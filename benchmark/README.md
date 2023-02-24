@@ -23,7 +23,8 @@ Available datasets:
 - tatoeba-sentences-2021-06-05
 - tatoeba-sentences-2021-06-05-common-48
 - open-subtitles-v2018-100k-per-lang
-- yubi_benchmark_dataset
+- yubi_benchmark_dataset_v1
+- yubi_benchmark_dataset_v2
 - dakshina-dataset-v1 (modified for our usecase.)
 
 On the host machine.
@@ -40,14 +41,4 @@ docker run -v `pwd`:/src -t -i bench python /src/run.py <benchmark_name> -d <dat
 ### 3. Run analysis
 ```bash
 python analyze.py --correctness -d <dataset> -r(optional)
-python analyze.py --timings
 ```
-
-### 4. Get memory usage for different models
-```bash
-python get_memory_usage.py <benchmark_names>
-# e.g. python get_memory_usage.py fasttext
-# e.g. python get_memory_usage.py fasttext-compressed
-```
-
-It will print memory usage in MB (bytes/1024/1024).
