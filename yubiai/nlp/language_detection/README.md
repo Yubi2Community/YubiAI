@@ -15,14 +15,14 @@
 
 ## How to import and use YuLan model
 * **LanguageDetection** calss takes two arguments **task_name** and **use_gpu**.
-    * **task_name** yulan model name (ex yulan-e4-v1, yulan-e4-v2 & yulan-e8-v2).
-    * **use_gpu** whether to use GPU or not.
+    * **task_name**: yulan model name (ex yulan-e4-v1, yulan-e4-v2 & yulan-e8-v2).
+    * **use_gpu**: whether to use GPU or not.
 * **detect_language** method takes two arguments **input_text** and  **top_k**.
-    * **input_text** input sentence.
-    * **top_k** returns top k languanges.
+    * **input_text**: input sentence.
+    * **top_k**: returns top k languanges.
 * **detect_language_batch** method takes two arguments **input_text_list** and  **top_k**.
-    * **input_text_list** input list of sentences.
-    * **top_k** returns top k languanges.
+    * **input_text_list**: input list of sentences.
+    * **top_k**: returns top k languanges.
 
 ```python
 
