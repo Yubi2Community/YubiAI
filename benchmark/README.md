@@ -17,7 +17,9 @@ Available benchmarks:
 - langdetect
 - langid
 - pycld2
-- yubidetect
+- yulan-e4-v1 aka yubidetect-v1
+- yulan-e4-V2 aka yubidetect-v2
+- yulan-e8-V2 aka yubidetect-e8-v1
 
 Available datasets:
 - tatoeba-sentences-2021-06-05

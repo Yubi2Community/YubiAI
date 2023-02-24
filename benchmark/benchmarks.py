@@ -47,17 +47,17 @@ BENCHMARKS = {
     'measure_memory': pycld2.measure_memory,
     'supported_languages_alpha3': [Language.get(lang).to_alpha3() for lang in pycld2.SUPPORTED_LANGUAGES],
   },
-  'yubilangdetect-v1': {
+  'yulan-e4-v1': {
     'run': yubidetect_v1.run,
     'measure_memory': yubidetect_v1.measure_memory,
     'supported_languages_alpha3': [get_alpha3(lang) for lang in yubidetect_v1.SUPPORTED_LANGUAGES],
   },
-  'yubilangdetect-v2': {
+  'yulan-e4-v2': {
     'run': yubidetect_v2.run,
     'measure_memory': yubidetect_v2.measure_memory,
     'supported_languages_alpha3': [get_alpha3(lang) for lang in yubidetect_v2.SUPPORTED_LANGUAGES],
   },
-  'yubilangdetect-e8-v1': {
+  'yulan-e8-v2': {
     'run': yubidetect_e8_v1.run,
     'measure_memory': yubidetect_e8_v1.measure_memory,
     'supported_languages_alpha3': [get_alpha3(lang) for lang in yubidetect_e8_v1.SUPPORTED_LANGUAGES],

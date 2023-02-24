@@ -42,7 +42,7 @@ if __name__ == "__main__":
   print(f'Loading dataset {args.dataset}...')
   dataset = datasets.get(args.dataset)
 
-  INTERESTED_LANGUAGES = BENCHMARKS["yubilangdetect-v1"]["supported_languages_alpha3"]
+  INTERESTED_LANGUAGES = BENCHMARKS["yulan-e4-v1"]["supported_languages_alpha3"]
   #print(INTERESTED_LANGUAGES)
   
   for benchmark_name in args.benchmarks:
