@@ -19,10 +19,10 @@
     * **use_gpu** whether to use GPU or not.
 * **detect_language** method takes two arguments **input_text** and  **top_k**.
     * **input_text** input sentence.
-    * **top_k** to return top k languanges.
+    * **top_k** returns top k languanges.
 * **detect_language_batch** method takes two arguments **input_text_list** and  **top_k**.
-    * **input_text_list** list of sentences.
-    * **top_k** to return top k languanges.
+    * **input_text_list** input list of sentences.
+    * **top_k** returns top k languanges.
 
 ```python
 
