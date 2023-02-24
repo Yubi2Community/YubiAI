@@ -1,6 +1,6 @@
 # Language Detection
 
-## Yubi Languange Detection Model
+## YuLan - Yubi Languange Detection Model
 
 * Using [YubiTokenzier](../tokenizer/) Byte-Pair-Encoding tokenizer trained using fintech data.
 * Support 14 most used Indian languages and Transliterated versions of these languages.
@@ -13,13 +13,22 @@
     * To detect speech-bot conversation language after speech-2-text
     * Differentiate between text vs roman-transliterated-text
 
-## How to import and use Yubi Languagae Detection
+## How to import and use YuLan model
+* **LanguageDetection** calss takes two arguments **task_name** and **use_gpu**.
+    * **task_name** yulan model name (ex yulan-e4-v1, yulan-e4-v2 & yulan-e8-v2).
+    * **use_gpu** whether to use GPU or not.
+* **detect_language** method takes two arguments **input_text** and  **top_k**.
+    * **input_text** input sentence.
+    * **top_k** to return top k languanges.
+* **detect_language_batch** method takes two arguments **input_text_list** and  **top_k**.
+    * **input_text_list** list of sentences.
+    * **top_k** to return top k languanges.
 
 ```python
 
 from yubiai.nlp.language_detection.yubiLanguageDetection import LanguageDetection
 
-model = LanguageDetection()
+model = LanguageDetection(task_name="yulan-e4-v2", use_gpu=False)
 
 ### English text tokenisation
 text = "CredAvenue is building India’s first and largest de-facto operating system for the discovery, investment, fulfilment, and collection of any debt solution."

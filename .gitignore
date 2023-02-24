@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#ignore csv & npy file extns
+*.csv
+*.npy
