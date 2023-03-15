@@ -31,7 +31,7 @@ class LanguageDetection():
                 ii. input0 folder
             c. sentencepiece.bpe.model, sentencepiece_vocab
     """
-    def __init__(self, task_name="e4_v2_language_detection", use_gpu=False):
+    def __init__(self, task_name="yulan-e4-v2", use_gpu=False):
         
         self.use_gpu = use_gpu
         self.current_path = BASE_PATH
