@@ -26,7 +26,8 @@ nlp = [
 
 cv = [
     "tensorflow==2.11.0",
-    "keras==2.11.0"
+    "keras==2.11.0",
+    "detecto==1.2.2"
 ]
 
 [tool.distutils.bdist_wheel]
