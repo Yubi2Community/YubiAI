@@ -16,8 +16,8 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi's Da
     * [HuggingFace Supported YubiTokenizers](./yubiai/nlp/tokenizer/)
 * Dec 2022
     * [YuLan V1 - Yubi's Text Language Detection](./yubiai/nlp/language_detection/)
-    * [TrueCaser Model](./yubiai/nlp/seq2seq/)
-    * [Character-2-Text generation Model](./yubiai/nlp/seq2seq/)
+    * [TrueCaser Model v1](./yubiai/nlp/seq2seq/)
+    * [Character-2-Text generation Model v1](./yubiai/nlp/seq2seq/)
 * Feb 2023
     * [YuLan V2 - Yubi's Text Language Detection](./yubiai/nlp/language_detection/)
 
@@ -30,7 +30,9 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi's Da
 
 * January 2023
     * [Image Augmentations (Random rotate & croppings)](./yubiai/vision/utility/)
-    * [Document Skew Detection](./yubiai/vision/skew_detection/)
+    * [Document Skew Detection v1](./yubiai/vision/skew_detection/)
+* March 2023
+    * [Fintech Document Segmentation model v1](./yubiai/vision/document_segmentation/)
 
 </p></details>
 </br>
