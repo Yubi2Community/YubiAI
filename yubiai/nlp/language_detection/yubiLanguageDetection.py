@@ -9,13 +9,13 @@
 ###     Data size of : >12Gb
 ###
 
+
+from yubiai import set_model_info,  verify_model_path
 import os, re, torch, json
 from fairseq.models.roberta import RobertaModel
 from fairseq.data.data_utils import collate_tokens
 from torch.nn.functional import softmax
 from yubiai.nlp.utility.file_handlers import load_json
-from yubiai import FTPHOST, FTPPORT, BASE_PATH
-
 
 
 class LanguageDetection():
@@ -32,59 +32,25 @@ class LanguageDetection():
             c. sentencepiece.bpe.model, sentencepiece_vocab
     """
     def __init__(self, task_name="yulan-e4-v2", use_gpu=False):
-        
         self.use_gpu = use_gpu
-        self.current_path = BASE_PATH
-        self.model_folder_name = task_name
-        self.model_folder_path = "%s/models/%s" % (self.current_path, self.model_folder_name)
-        self.model_file_name = "checkpoint_best.pt"
-        self.languages_supported_file_name = "languages_supported.json"
-        self.model_file_path = "%s/%s" % (self.model_folder_path, self.model_file_name)
-        #self.s3_path = "%s/models/%s" % (S3BASEPATH, self.model_folder_name)
 
-        self.model_zip_path = "%s/models/" % self.current_path
-        self.model_zip_name = "%s.zip" % task_name
+        self.model_folder_path, self.model_folder_name, self.model_zip_path, self.model_zip_name = set_model_info(task_name)
+        verify_model_path(self.model_folder_path, self.model_folder_name, self.model_zip_path, self.model_zip_name)
+        self.languages_supported_file_name = "languages_supported.json"
         self.languages_supported_file_path = "%s/%s" % (self.model_folder_path, self.languages_supported_file_name)
-        self.ftp_path = "http://%s:%s/yubi_ds_capability/models/%s" % (FTPHOST, FTPPORT, self.model_zip_name)
         
-        ### self.verify_model_path()
-        self.verify_model_path_ftp()
         self.model = self.load_model()
         self.label_fn = lambda label: self.model.task.label_dictionary.string([label + self.model.task.label_dictionary.nspecial])
         self.languages_supported = load_json(self.languages_supported_file_path)
-
-    def verify_model_path_ftp(self):
-        """
-        Verify if model folder exists at default path.
-        If not then download the same from default ftp location
-        """
-        if os.path.exists(self.model_folder_path):
-            print("Model Path exist !!")
-        elif os.path.exists(f"{self.model_zip_path}/{self.model_zip_name}"):
-            print("Model Path exist(ZIP format) !!")
-            os.system("cd %s; unzip %s; rm -f %s; cd -;" % (self.model_zip_path, self.model_zip_name, self.model_zip_name))
-        else:
-            print("Model Path do not exist !!")
-            os.system("wget %s -P %s" % (self.ftp_path, self.model_zip_path))
-            os.system("cd %s; unzip %s; rm -f %s; cd -;" % (self.model_zip_path, self.model_zip_name, self.model_zip_name))
-
-    def verify_model_path(self):
-        """
-        Verify if model folder exists at default path.
-        If not then download the same from default s3 location
-        """
-        if not os.path.exists(self.model_folder_path):
-            print("Model Path do not exist !!")
-            print("Downloading from s3 path - %s" % self.model_folder_path)
-            os.system("mkdir %s" % self.model_folder_path)
-            s3_command = "aws s3 cp --recursive %s %s/" % (self.s3_path, self.model_folder_path)
-            os.system(s3_command)
 
     def load_model(self):
         """
         Load model from default path
         """
-        model = RobertaModel.from_pretrained(self.model_folder_path, checkpoint_file="checkpoint_best.pt", data_name_or_path="./bin_data", bpe="sentencepiece")
+        model = RobertaModel.from_pretrained(self.model_folder_path, 
+                                             checkpoint_file="checkpoint_best.pt", 
+                                             data_name_or_path="./bin_data", 
+                                             bpe="sentencepiece")
         model.eval()
         if self.use_gpu == True:
             model.cuda()

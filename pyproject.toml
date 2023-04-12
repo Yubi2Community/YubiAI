@@ -4,15 +4,16 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "yubiai"
-description = "YubiAi builds great Models. Easy to use NLP, CV and Speech Modules with pre-trained Models."
-authors = [{name = "Mettu Venkata Ramireddy", email = "venkata.ramireddy@go-yubi.com"}]
+description = "State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi Data Science Team"
+authors = []
 readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: Apache Software License"]
 dynamic = ["version"]
 requires-python = ">=3.7"
 dependencies = [
-    "torch==1.13.1"
+    "torch==1.13.1",
+    "gdown"
 ]
 
 [project.optional-dependencies]
