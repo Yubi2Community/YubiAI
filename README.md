@@ -77,15 +77,3 @@ tokenizer = YubiTokenizer()
 ```
 
 <br>
-
-## Troubleshooting Model Download
-* We have hosted our models on our internal FTP server. We are checking more elegant solutions around the same.
-* Download links are accessible anywhere .. on cloud or your personal machine. But they could be termed as insecure by your office network.
-* In such cases, please whilelist the IP address given in the [init](./yubiai/__init__.py) file.
-* Otherwise you can manually download models from [gdrive](https://drive.google.com/drive/folders/1K_A57Gzj0wiQynarnlbJhfejzf8Et_e1) and place in a folder structure of `your_homepath/.cache/yubiai/`. You can find your homepath with below mentioned sample code.
-```python
-import pathlib
-homepath = pathlib.Path.home()
-```
-
-</br>

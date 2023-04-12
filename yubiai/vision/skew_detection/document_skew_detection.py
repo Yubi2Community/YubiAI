@@ -7,7 +7,7 @@
 ###     Type 2 : Skew Angle Detection (0 to 90 float numbers)
 ###
 
-from yubiai import FTPHOST, FTPPORT, BASE_PATH
+from yubiai import set_model_info,  verify_model_path
 import os, random
 import PIL.Image
 from tensorflow.keras.models import load_model
@@ -23,55 +23,19 @@ class YubiDocSkewDetector:
     def __init__(self, qudrant_model="Quad4Detection_ResNet101V2_0-90", skew_model="SkewDetection_ResNet101V2_0-90", use_gpu=False):
         ### Mention all default model variables
         self.use_gpu = use_gpu
-        self.current_path = BASE_PATH
-
         self.preprocessing_obj = image_preprocessing()
 
         ### Quadrant Detection Model
-        self.qudrant_model_folder_name = qudrant_model
-        self.qudrant_model_folder_path = "%s/models/%s" % (self.current_path, self.qudrant_model_folder_name)
-        self.qudrant_model_zip_path = "%s/models/" % self.current_path
-        self.qudrant_model_zip_name = "%s.zip" % self.qudrant_model_folder_name
-        self.qudrant_model_ftp_path = "http://%s:%s/yubi_ds_capability/models/%s" % (FTPHOST, FTPPORT, self.qudrant_model_zip_name)
-        self.verify_model_path_ftp(model_type="qudrant")
-        self.qudrant_model = self.load_model(self.qudrant_model_folder_path)
+        self.qudrant_model_folder_path, self.qudrant_model_folder_name, self.qudrant_model_zip_path, self.qudrant_model_zip_name = set_model_info(qudrant_model)
+        verify_model_path(self.qudrant_model_folder_path, self.qudrant_model_folder_name, self.qudrant_model_zip_path, self.qudrant_model_zip_name)
+        self.qudrant_model = self.load_yubi_model(self.qudrant_model_folder_path)
 
         ### Skew/Rotation Detection Model
-        self.skew_model_folder_name = skew_model
-        self.skew_model_folder_path = "%s/models/%s" % (self.current_path, self.skew_model_folder_name)
-        self.skew_model_zip_path = "%s/models/" % self.current_path
-        self.skew_model_zip_name = "%s.zip" % self.skew_model_folder_name
-        self.skew_model_ftp_path = "http://%s:%s/yubi_ds_capability/models/%s" % (FTPHOST, FTPPORT, self.skew_model_zip_name)
-        self.verify_model_path_ftp(model_type="skew")
-        self.skew_model = self.load_model(self.skew_model_folder_path)
+        self.skew_model_folder_path, self.skew_model_folder_name, self.skew_model_zip_path, self.skew_model_zip_name = set_model_info(skew_model)
+        verify_model_path(self.skew_model_folder_path, self.skew_model_folder_name, self.skew_model_zip_path, self.skew_model_zip_name)
+        self.skew_model = self.load_yubi_model(self.skew_model_folder_path)
 
-    def verify_model_path_ftp(self, model_type="skew"):
-        """
-        Verify if model folder exists at default path.
-        If not then download the same from default ftp location
-        """
-        if model_type == "skew":
-            model_folder_path = self.skew_model_folder_path
-            model_zip_path = self.skew_model_zip_path
-            model_zip_name = self.skew_model_zip_name
-            model_ftp_path = self.skew_model_ftp_path
-        else: ### model_type == "qudrant"
-            model_folder_path = self.qudrant_model_folder_path
-            model_zip_path = self.qudrant_model_zip_path
-            model_zip_name = self.qudrant_model_zip_name
-            model_ftp_path = self.qudrant_model_ftp_path
-
-        if os.path.exists(model_folder_path):
-            print("Model Path exist - %s !!" % model_type)
-        elif os.path.exists(f"{model_zip_path}/{model_zip_name}"):
-            print("Model Path exist(ZIP format) - %s !!" % model_type)
-            os.system("cd %s; unzip %s; rm -f %s; cd -;" % (model_zip_path, model_zip_name, model_zip_name))
-        else:
-            print("Model Path do not exist - %s !!" % model_type)
-            os.system("wget %s -P %s" % (model_ftp_path, model_zip_path))
-            os.system("cd %s; unzip %s; rm -f %s; cd -;" % (model_zip_path, model_zip_name, model_zip_name))
-
-    def load_model(self, model_path):
+    def load_yubi_model(self, model_path):
         """
         Load model from given path
         """
