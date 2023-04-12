@@ -8,7 +8,7 @@
 ###
 
 
-from yubiai import FTPHOST, FTPPORT, BASE_PATH
+from yubiai import set_model_info,  verify_model_path
 from detecto import core, utils
 import os, json, cv2
 
@@ -16,13 +16,8 @@ import os, json, cv2
 class YubiDocumentSegmentDetection:
     def __init__(self, segment_model="yubi_document_segmentation_v1", use_gpu=False):
         self.use_gpu = use_gpu
-        self.current_path = BASE_PATH
-        self.model_folder_name = segment_model
-        self.model_folder_path = "%s/models/%s" % (self.current_path, self.model_folder_name)
-        self.model_zip_path = "%s/models/" % self.current_path
-        self.model_zip_name = "%s.zip" % self.model_folder_name
-        self.model_ftp_path = "http://%s:%s/yubi_ds_capability/models/%s" % (FTPHOST, FTPPORT, self.model_zip_name)
-        self.verify_model_path_ftp()
+        self.model_folder_path, self.model_folder_name, self.model_zip_path, self.model_zip_name = set_model_info(segment_model)
+        verify_model_path(self.model_folder_path, self.model_folder_name, self.model_zip_path, self.model_zip_name)
         self.model, self.label_id_map = self.load_model(self.model_folder_path)
 
     def load_model(self, model_path):
@@ -31,26 +26,6 @@ class YubiDocumentSegmentDetection:
         label_id_map = json.load(open(label_id_map_path,'r'))
         model = core.Model.load(model_checkpoint_path, list(label_id_map.keys()))
         return model, label_id_map
-        
-    def verify_model_path_ftp(self):
-        """
-        Verify if model folder exists at default path.
-        If not then download the same from default ftp location
-        """
-        model_folder_path = self.model_folder_path
-        model_zip_path = self.model_zip_path
-        model_zip_name = self.model_zip_name
-        model_ftp_path = self.model_ftp_path
-
-        if os.path.exists(model_folder_path):
-            print("Model Path exist !!")
-        elif os.path.exists(f"{model_zip_path}/{model_zip_name}"):
-            print("Model Path exist(ZIP format) !!")
-            os.system("cd %s; unzip %s; rm -f %s; cd -;" % (model_zip_path, model_zip_name, model_zip_name))
-        else:
-            print("Model Path do not exist !!")
-            os.system("wget %s -P %s" % (model_ftp_path, model_zip_path))
-            os.system("cd %s; unzip %s; rm -f %s; cd -;" % (model_zip_path, model_zip_name, model_zip_name))
 
     def detect_segments(self, imgpath, prob_threshold=0.0, export_image_with_tags=False, export_image_path=""):
         preds = {}
