@@ -33,6 +33,8 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi's Da
     * [Document Skew Detection v1](./yubiai/vision/skew_detection/)
 * March 2023
     * [Fintech Document Segmentation model v1](./yubiai/vision/document_segmentation/)
+* April 2023
+    * [Fintech Document Segmentation model v2](./yubiai/vision/document_segmentation/)
 
 </p></details>
 </br>
