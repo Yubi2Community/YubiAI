@@ -38,6 +38,9 @@ model_list = {
     "yubi_document_segmentation_aug_v1" : 
                     {"url":"https://drive.google.com/file/d/1Z3V8nzUau3K1HozI7fYP19RxQkTdnq4f/view?usp=share_link", 
                     "filename":"yubi_document_segmentation_aug_v1.zip"},
+    "yubi_document_segmentation_v2" : 
+                    {"url":"https://drive.google.com/file/d/1dDt_w30P09V9VTeme1ZxKxtjg2aM4kdx/view?usp=share_link", 
+                    "filename":"yubi_document_segmentation_v2.zip"},
     "TrueCaser_transformer_wmt_en_de_big_t2t" : 
                     {"url":"https://drive.google.com/file/d/1VNXrYw7eE4R5hz-rhV0ZACR_e7jOMuJL/view?usp=share_link", 
                     "filename":"TrueCaser_transformer_wmt_en_de_big_t2t.zip"},
