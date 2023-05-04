@@ -40,6 +40,8 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi's Da
 </br>
 <br>
 
+## Download Model Locations
+* You can download models directly from this [google-drive shared folder](https://drive.google.com/drive/folders/1JteTr9GWezVIcRJd8TJ5uOnPVRznjS7o)
 
 ## Environment
 * Models files hosted on FTP server and are downloaded when constructor is called
