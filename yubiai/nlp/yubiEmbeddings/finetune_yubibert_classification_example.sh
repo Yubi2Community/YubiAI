@@ -15,11 +15,14 @@
 ##########################################
 pip install "sentencepiece>=0.1.97" "fairseq==0.12.2"
 
-#########################################################
-#### Get files from yubibert model zip               ####
-#### For encoder-8 model use "yubibert_e8_small.zip" ####
-#########################################################
-wget http://13.235.92.51:8989/yubi_ds_capability/models/yubibert_e4_micro.zip .
+##########################################################################################
+#### Get files from yubibert model zip                                                ####
+#### For encoder-8 model use "yubibert_e8_small.zip"                                  ####
+#### For encoder-4 model use "yubibert_e4_micro.zip"                                  ####
+#### Download models from here ->                                                     ####
+####         https://drive.google.com/drive/folders/1JteTr9GWezVIcRJd8TJ5uOnPVRznjS7o ####
+##########################################################################################
+
 unzip yubibert_e4_micro.zip
 cp yubibert_e4_micro/sentencepiece* .
 cp yubibert_e4_micro/bin_data/dict.txt .
