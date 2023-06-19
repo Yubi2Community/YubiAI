@@ -99,6 +99,7 @@ def set_model_info(model_name):
     
 
 def download_model_zip(model_name):
+    os.makedirs("%s/models" % (BASE_PATH), exist_ok=True)
     if model_name in model_list:
         model_url = model_list[model_name]['url']
         model_file_name = model_list[model_name]['filename']
