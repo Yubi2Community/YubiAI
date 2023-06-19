@@ -21,7 +21,7 @@
 * We used >1million images totally with classes `'anime', 'docimage', 'explicit', 'gore_violence', 'non-explicit', 'sexy'`
 * Various models used and currently two models are provided
     * `nsfw_detection_ResNet101V2`
-        * We finetuned will layers open for training
+        * We finetuned with all layers open for training
     * `nsfw_detection_Xception_block_12-14`
         * We finetuned Xception model last 3 block
     * `nsfw_detection_Xception_block_13-14`
