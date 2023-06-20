@@ -39,6 +39,7 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi's Da
     * [Fintech Document Segmentation model v2](./yubiai/vision/document_segmentation/)
 * Jun 2023
     * [Document Image Detection](./yubiai/vision/document_image_detection/)
+    * [NSFW Image Detection](./yubiai/vision/document_image_detection/)
 </p></details>
 </br>
 <br>

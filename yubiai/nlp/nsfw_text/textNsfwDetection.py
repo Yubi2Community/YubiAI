@@ -35,21 +35,6 @@ class NSFWDetection():
         self.model = self.load_model()
         self.label_fn = lambda label: self.model.task.label_dictionary.string([label + self.model.task.label_dictionary.nspecial])
 
-    def verify_model_path_ftp(self):
-        """
-        Verify if model folder exists at default path.
-        If not then download the same from default ftp location
-        """
-        if os.path.exists(self.model_folder_path):
-            print("Model Path exist !!")
-        elif os.path.exists(f"{self.model_zip_path}/{self.model_zip_name}"):
-            print("Model Path exist(ZIP format) !!")
-            os.system("cd %s; unzip %s; rm -f %s; cd -;" % (self.model_zip_path, self.model_zip_name, self.model_zip_name))
-        else:
-            print("Model Path do not exist !!")
-            os.system("wget %s -P %s" % (self.ftp_path, self.model_zip_path))
-            os.system("cd %s; unzip %s; rm -f %s; cd -;" % (self.model_zip_path, self.model_zip_name, self.model_zip_name))
-
     def load_model(self):
         """
         Load model from default path
