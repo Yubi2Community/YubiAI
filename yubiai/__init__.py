@@ -58,7 +58,28 @@ model_list = {
                     "filename":"Quad4Detection_ResNet101V2_0-90.zip"},
     "character2text_transformer_wmt_en_de_big_t2t" : 
                     {"url":"https://drive.google.com/file/d/1r3VqG4fzoq6fAGHrwCXQEpFkRJxx8RZw/view?usp=share_link", 
-                    "filename":"character2text_transformer_wmt_en_de_big_t2t.zip"}
+                    "filename":"character2text_transformer_wmt_en_de_big_t2t.zip"},
+    "nsfw_detection_ResNet101V2":
+                    {"url":"https://drive.google.com/file/d/1dmJ2hl0wSNaEwUTmA4h2ROFCh_L_eWpA/view?usp=sharing",
+                    "filename":"nsfw_detection_ResNet101V2.zip"},
+    "nsfw_detection_Xception_block_12-14":
+                    {"url":"https://drive.google.com/file/d/1l7-zuQGmGLVRqiG8E1O0iepr1tXYO3iL/view?usp=sharing",
+                    "filename":"nsfw_detection_Xception_block_12-14.zip"},
+    "nsfw_detection_Xception_block_13-14":
+                    {"url":"https://drive.google.com/file/d/1KYmvD1KncwHXZbSMh5vHexRCNJlSPyyi/view?usp=sharing",
+                    "filename":"nsfw_detection_Xception_block_13-14.zip"},
+    "nsfw_detection_vit-b16_layer16":
+                    {"url":"https://drive.google.com/file/d/1cIHe1FPEbxetJgRfKjxjW4EVK9sw0KKO/view?usp=sharing",
+                    "filename":"nsfw_detection_vit-b16_layer16.zip"},
+    "doc-vs-nondoc_Xception_block_12-14":
+                    {"url":"https://drive.google.com/file/d/1VHpcOXyZSJfM_QP2iZYtXJBm0L_HI5Q0/view?usp=sharing",
+                    "filename":"doc-vs-nondoc_Xception_block_12-14.zip"},
+    "doc-vs-nondoc_vit-b16_layer15":
+                    {"url":"https://drive.google.com/file/d/1I7MaLGh6Qc3pkRlLUSIrAw5qOD4Jckbz/view?usp=sharing",
+                    "filename":"doc-vs-nondoc_vit-b16_layer15.zip"},
+    "text_nsfw_detection":
+                    {"url":"https://drive.google.com/file/d/1As4ZojVc3ZUMHiHCMckl80VMl1rk2jxz/view?usp=sharing",
+                    "filename":"text_nsfw_detection.zip"},
 }
 
 
@@ -78,6 +99,7 @@ def set_model_info(model_name):
     
 
 def download_model_zip(model_name):
+    os.makedirs("%s/models" % (BASE_PATH), exist_ok=True)
     if model_name in model_list:
         model_url = model_list[model_name]['url']
         model_file_name = model_list[model_name]['filename']
