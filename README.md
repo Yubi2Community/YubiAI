@@ -20,6 +20,8 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi's Da
     * [Character-2-Text generation Model v1](./yubiai/nlp/seq2seq/)
 * Feb 2023
     * [YuLan V2 - Yubi's Text Language Detection](./yubiai/nlp/language_detection/)
+* Jun 2023
+    * [NSFW Text Detection](./yubiai/nlp/nsfw_text/)
 
 
 </p>
@@ -35,7 +37,9 @@ State-of-the-art models in AI,ML,NLP & Vision for FinTech community by Yubi's Da
     * [Fintech Document Segmentation model v1](./yubiai/vision/document_segmentation/)
 * April 2023
     * [Fintech Document Segmentation model v2](./yubiai/vision/document_segmentation/)
-
+* Jun 2023
+    * [Document Image Detection](./yubiai/vision/document_image_detection/)
+    * [NSFW Image Detection](./yubiai/vision/document_image_detection/)
 </p></details>
 </br>
 <br>
