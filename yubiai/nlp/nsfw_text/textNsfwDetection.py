@@ -71,6 +71,6 @@ class NSFWDetection():
         total_score = np.sum(np.array(list(result.values())))
         result = {k:v/total_score for k,v in result.items()}
         out_result ={}
-        out_result['sfw'] = int(result['0'])
-        out_result['nsfw'] = int(result['1'])
+        out_result['sfw'] = result['0']
+        out_result['nsfw'] = result['1']
         return out_result
